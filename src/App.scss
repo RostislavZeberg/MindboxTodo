@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "Play";
+  src: local("Play-Bold"), url(./assets/Play-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Play";
+  src: local("Play-Regular"), url(./assets/Play-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.flex {
+  display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  margin: 0;
+  font-family: Play, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+#root {
+  margin: 0 auto;
+  padding-top: 2rem;
+  background-color: #ebebeb;
+  min-height: 100vh;
+}
+
+.todos {
+  margin: 0 auto;
+  width: fit-content;
+
+  &__title {
+    text-align: center;
+    font-size: 5.2em;
+  }
+
+  &__input {
+    padding: 25px 25px 25px 25px;
+    outline: none;
+    border: none;
+    width: calc(100% - 50px);
+    font-size: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    background-color: white;
+  }
+
+  .item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+    border-top: solid 1px #d7cccc;
+
+    &__block {
+      display: flex;
+      align-items: center;
+    }
+
+    &__btn {
+      position: relative;
+      display: block;
+      margin-right: 10px;
+      border: solid 1px #d7cccc;
+      border-radius: 50px;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+    }
+
+    &__descr {
+      margin-right: 30px;
+    }
+
+    &__btn-delete {
+      color: #d7cccc;
+      font-weight: 700;
+    }
+
+    &__btn-delete:hover {
+      color: red;
+      font-weight: 700;
+    }
+
+    &__checkbox {
+      display: none;
+    }
+
+    &__error {
+      position: absolute;
+      top: -7px;
+      right: 40px;
+      color: red;
+    }
+
+    .custom-checkbox {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    .custom-checkbox-none {
+      opacity: 0;
+    }
+  }
+
+  .item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
