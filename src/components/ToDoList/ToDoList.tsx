@@ -48,6 +48,7 @@ export const ToDoList = () => {
         type="text"
         placeholder={"Запишите новое дело и кликните enter"}
       />
+      {todos.length === 0 ? <h3 style={{textAlign: "center"}}>Введите запланированное дело в окно выше и нажмите ENTER</h3> : null}
       <div className="todos__list">
         {memoizedTodos}
       </div>
